@@ -33,30 +33,3 @@ function addCloseListener(bloc) {
         });
     }
 }
-
-
-/*
-details = new Map();
-
-for (let i = 0; i < opened.length; i++) {
-    if (opened[i].hasAttribute('id')) {
-        details.set(opened[i].id, opened[i]);
-    }
-}
-
-details.forEach((detail) => {
-    openActionnul(detail.id);
-});
-
-function openActionnul(id) {
-    let bloc = document.getElementById('bloc_' + id);
-    let close = document.querySelector('#' + id + ' .close');
-    bloc.addEventListener('mouseup', function() {
-        details.get(id).classList.add('open');
-    });
-    close.addEventListener('mouseup', function() {
-        details.get(id).classList.remove('open');
-    });
-
-}
-    */
