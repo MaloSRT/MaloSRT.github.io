@@ -12,11 +12,9 @@ function openActions(bloc) {
 }
 
 function addOpenListener(bloc) {
-    console.log('addOpenListener');
     let popup = bloc.getElementsByClassName('popup')[0];
     let controller = new AbortController();
     bloc.addEventListener('mouseup', function() {
-        console.log('open');
         popup.classList.add('open');
         controller.abort();
     }, { signal: controller.signal });
@@ -27,7 +25,6 @@ function addCloseListener(bloc) {
     let popup = bloc.getElementsByClassName('popup')[0];
     for (let i = 0; i < close.length; i++) {
         close[i].addEventListener('mouseup', function() {
-            console.log('close');
             popup.classList.remove('open');
             setTimeout(function() { addOpenListener(bloc); });
         });

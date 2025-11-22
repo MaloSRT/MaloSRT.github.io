@@ -2,6 +2,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Mono', monospace;
+    background-color: #fff;
+    scrollbar-width: auto;
+}
+
+body * {
+    scrollbar-width: thin;
 }
 
 *::selection {
@@ -100,31 +106,31 @@ section {
     min-width: 410px;
 }
 
-@media all and (min-width: 1060px) {
+@media all and (min-width: 1080px) {
     .blocs {
         max-width: 1050px;
     }
 }
 
-@media (min-width: 850px) and (max-width: 1059px) {
+@media (min-width: 870px) and (max-width: 1079px) {
     .blocs {
         max-width: 840px;
     }
 }
 
-@media (min-width: 640px) and (max-width: 849px) {
+@media (min-width: 660px) and (max-width: 869px) {
     .blocs {
         max-width: 630px;
     }
 }
 
-@media (min-width: 430px) and (max-width: 639px) {
+@media (min-width: 450px) and (max-width: 659px) {
     .blocs {
         max-width: 420px;
     }
 }
 
-@media (max-width: 429px) {
+@media (max-width: 449px) {
     .blocs {
         max-width: 356px;
     }
@@ -222,7 +228,8 @@ section {
     .d_desc, .d_img  {
         width: 50%;
         box-sizing: border-box;
-        overflow: scroll;
+        overflow-y: auto;
+        scrollbar-gutter: stable;
     }
     .d_desc {
         padding: 35px;
@@ -235,12 +242,13 @@ section {
     }
 }
 
-@media (max-width: 1059px) {
+@media (max-width: 1079px) {
     .details {
         width: calc(100% - 30px);
         max-width: 500px;
         flex-direction: column;
-        overflow: scroll;
+        overflow-y: auto;
+        scrollbar-gutter: stable;
         margin-top: 15px;
         margin-bottom: 15px;
     }
